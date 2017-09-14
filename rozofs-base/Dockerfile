@@ -16,7 +16,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d
 
 # Install the release key
-RUN wget -O - http://dl.rozofs.org/deb/devel@rozofs.com.gpg.key | apt-key add
+RUN wget -O - http://dl.rozofs.org/deb/devel@rozofs.com.gpg.key | apt-key add -
 
 # Set the RozoFS repository to access RozoFS packages
 #RUN echo deb  http://54.225.196.202/debian/master $(lsb_release -sc) main | tee /etc/apt/sources.list.d/rozofs.list
