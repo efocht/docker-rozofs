@@ -7,7 +7,8 @@ MAINTAINER denaitre, dimitri.pertin@univ-nantes.fr
 # Make sure the package repository is up to date and install required packages
 RUN apt-get -y update && apt-get install -y \
     wget \
-    lsb-release
+    lsb-release \
+    gnupg
 
 # Avoid warning during packet installations
 ENV DEBIAN_FRONTEND noninteractive
